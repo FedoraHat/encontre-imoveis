@@ -1,0 +1,20 @@
+/*SEARCH BAR*/
+.search-container{
+  padding-top: 40px;
+  min-height: 30vh;
+  transition: all 0.3s ease;
+}
+.search-container:not(.present){
+  padding-top: 200px;
+}
+
+.search-container .search-container-title{
+  margin-bottom: 20px;
+}
+
+
+resultado-pesquisa{
+  display: block;
+  background-color: white;
+  height: 85vh;
+}
