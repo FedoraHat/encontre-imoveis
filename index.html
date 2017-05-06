@@ -7,23 +7,25 @@
     <link href="assets/theme.css" rel="stylesheet">
   </head>
   <body ng-controller="ApplicationCtrl as application">
-    <div class="container search-container" ng-class="{'present': application.pesquisa}">
-      <h1 class="text-center search-container-title">Descubra os melhores Imóveis para alugar e comprar.</h1>
-      <div class="form-group">
-        <input class="form-control" type="search" placeholder="Bairro, Cidade" ng-model="application.pesquisa">
+    <search-bar ref="application"></search-bar>
+    <div class='content' ng-if="application.pesquisa">
+      <div class="container-fluid">
+        <ul>
+          <li ng-repeat="place in application.placesResult">
+            {{place.title}}
+          </li>
+        </ul>
       </div>
     </div>
-    <resultado-pesquisa ng-if="application.pesquisa">
-      <div class="container-fluid">
-
-      </div>
-    </resultado-pesquisa>
     <!-- vendor.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.1/angular-sanitize.min.js"></script>
     <!-- application.js -->
     <script src="app/app.js"></script>
     <script src="app/controllers/application.ctrl.js"></script>
+    <script src="app/components/search-bar.js"></script>
+    <script src="app/services/nestoria.js"></script>
   </body>
 </html>

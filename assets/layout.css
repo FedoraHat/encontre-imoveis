@@ -1,4 +1,7 @@
 /*SEARCH BAR*/
+barra-de-pesquisa{
+  display: block;
+}
 .search-container{
   padding-top: 40px;
   min-height: 30vh;
@@ -13,7 +16,7 @@
 }
 
 
-resultado-pesquisa{
+.content{
   display: block;
   background-color: white;
   height: 85vh;

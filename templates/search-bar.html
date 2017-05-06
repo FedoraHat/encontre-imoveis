@@ -1,0 +1,6 @@
+<div class="container search-container" ng-class="{'present': $ctrl.ref.pesquisa}">
+  <h1 class="text-center search-container-title">Descubra os melhores Imóveis para alugar e comprar.</h1>
+  <div class="form-group">
+    <input class="form-control" type="search" placeholder="Bairro, Cidade" ng-model="$ctrl.ref.pesquisa" ng-change="$ctrl.getPlaces()">
+  </div>
+</div>

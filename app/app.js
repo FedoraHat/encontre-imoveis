@@ -1,2 +1,7 @@
 'use strict'
-angular.module("encontreImoveisApp", [])
+angular.module("encontreImoveisApp", ['ngSanitize']).config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://api.nestoria.com.br/**'
+  ]);
+})

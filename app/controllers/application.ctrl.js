@@ -1,13 +1,14 @@
 'use strict'
 
-var ApplicationCtrl = function(){
+var ApplicationCtrl = function($rootScope){
   var self = {
-    pesquisa: ''
+    pesquisa: '',
+    placesResult: []
   }
 
   return self
 }
 
-ApplicationCtrl.$inject = []
+ApplicationCtrl.$inject = ['$rootScope']
 
 angular.module("encontreImoveisApp").controller("ApplicationCtrl", ApplicationCtrl)
