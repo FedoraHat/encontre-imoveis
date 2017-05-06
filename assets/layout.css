@@ -4,7 +4,7 @@ barra-de-pesquisa{
 }
 .search-container{
   padding-top: 40px;
-  min-height: 30vh;
+  min-height: 20vh;
   transition: all 0.3s ease;
 }
 .search-container:not(.present){
@@ -15,9 +15,35 @@ barra-de-pesquisa{
   margin-bottom: 20px;
 }
 
-
 .content{
   display: block;
   background-color: white;
-  height: 85vh;
+  min-height: 75vh;
+}
+
+/*Places*/
+
+place{
+  display: block;
+}
+
+place:hover{
+  cursor: pointer;
+}
+
+place:first-child {
+  margin-top: 20px;
+}
+
+/*Helpers*/
+.title{
+  line-height: 1.5;
+  font-size: 18px;
+}
+.price{
+  font-size: 24px;
+  line-height: 24px;
+}
+.price small{
+  opacity: 0.7;
 }
