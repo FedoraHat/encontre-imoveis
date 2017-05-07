@@ -10,7 +10,14 @@
     <search-bar ref="application"></search-bar>
     <div class='content' ng-if="application.pesquisa">
       <div class="container-fluid places">
-        <place model="p" ref="application" ng-repeat="p in application.placesResult"></place>
+        <selected-place ref="application" ng-show="application.selectedPlace"></selected-place>
+        <place
+          model="p"
+          ref="application"
+          ng-click="application.selectedPlace = p"
+          ng-repeat="p in application.placesResult"
+          ng-hide="application.selectedPlace">
+        </place>
       </div>
     </div>
     <!-- vendor.js -->
@@ -22,6 +29,7 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/application.ctrl.js"></script>
     <script src="app/components/place.js"></script>
+    <script src="app/components/selected-place.js"></script>
     <script src="app/components/search-bar.js"></script>
     <script src="app/services/nestoria.js"></script>
   </body>

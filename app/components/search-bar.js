@@ -4,6 +4,9 @@ var searchBarCtrl = function(Nestoria){
 
   // @doc: Requisitando Locais
   self.getPlaces = function(){
+    if(self.ref.selectedPlace){
+      self.ref.selectedPlace = null
+    }
     if(self.ref.pesquisa.length > 5){
       Nestoria.getPlaces(self.ref.pesquisa, function(response){
         // retornando para o escopo de aplicação

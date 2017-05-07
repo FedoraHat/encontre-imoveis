@@ -3,6 +3,7 @@
 var ApplicationCtrl = function($rootScope){
   var self = {
     pesquisa: '',
+    selectedPlace: null,
     placesResult: []
   }
 

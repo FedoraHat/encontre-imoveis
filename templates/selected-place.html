@@ -1,0 +1,22 @@
+<button type="button" class="btn btn-link btn-lg" ng-click="$ctrl.ref.selectedPlace = null">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Voltar
+</button>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-2">
+        <img ng-src="{{$ctrl.ref.selectedPlace.img_url}}" class='img-responsive' >
+      </div>
+      <div class="col-xs-10">
+        <h4 class='title'>
+          {{$ctrl.ref.selectedPlace.title}} <br>
+          <small>{{$ctrl.ref.selectedPlace.keywords}}</small>
+        </h4>
+        <h5>{{$ctrl.ref.selectedPlace.lister_name}}, {{$ctrl.ref.selectedPlace.datasource_name}}</h5>
+        <div class='price'>{{$ctrl.ref.selectedPlace.price_formatted}} <small>por mês</small></div>
+        <p>{{$ctrl.ref.selectedPlace.summary}}</p>
+        <a href="{{$ctrl.ref.selectedPlace.lister_url}}" target="_blank" class='btn btn-primary btn-large'>Ver para o site</a>
+      </div>
+    </div>
+  </div>
+</div>
