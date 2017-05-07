@@ -48,6 +48,11 @@ place:first-child {
   opacity: 0.7;
 }
 
+.loading{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /*Maps*/
 .ng-map{
   display:block;

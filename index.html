@@ -2,6 +2,7 @@
   <head>
     <title>AngularJS</title>
     <!-- vendo.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="assets/layout.css" rel="stylesheet">
     <link href="assets/theme.css" rel="stylesheet">
@@ -10,7 +11,10 @@
   <body ng-controller="ApplicationCtrl as application">
     <search-bar ref="application"></search-bar>
     <div class='content' ng-if="application.pesquisa">
-      <div class="container-fluid places">
+      <div class="text-center loading" ng-show="application.loading">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      </div>
+      <div class="container-fluid places" ng-if="!application.loading">
         <selected-place ref="application" ng-if="application.selectedPlace"></selected-place>
         <place
           model="p"
