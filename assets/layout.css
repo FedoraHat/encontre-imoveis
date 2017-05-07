@@ -47,3 +47,10 @@ place:first-child {
 .price small{
   opacity: 0.7;
 }
+
+/*Maps*/
+.ng-map{
+  display:block;
+  height: 360px;
+  margin-bottom: 20px;
+}

@@ -4,6 +4,11 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="row">
+      <div class='col-xs-12'>
+        <ng-map class='ng-map' center="[{{$ctrl.ref.selectedPlace.latitude}}, {{$ctrl.ref.selectedPlace.longitude}}]" default-style="false">
+           <marker position="[{{$ctrl.ref.selectedPlace.latitude}}, {{$ctrl.ref.selectedPlace.longitude}}]" title="{{$ctrl.ref.selectedPlace.title}}"></marker>
+        </ng-map>
+      </div>
       <div class="col-xs-2">
         <img ng-src="{{$ctrl.ref.selectedPlace.img_url}}" class='img-responsive' >
       </div>
